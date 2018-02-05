@@ -1,0 +1,15 @@
+Steps to install OSMnx on anaconda
+ 
+ 1. conda install -c conda-forge osmnx
+ 2. conda config --add channels conda-forge
+ 3. conda create --yes -c conda-forge -n OSMNX python=3.6 osmnx
+ 4.  source activate OSMNX
+  
+  
+Sample Exmaple 
+
+import osmnx as ox
+G = ox.graph_from_place('Auckland, NZ', network_type='drive', which_result=2)
+ox.plot_graph(ox.project_graph(G))
+
+It will take Few mintues to Show Output.
